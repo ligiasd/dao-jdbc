@@ -8,8 +8,8 @@ public class Seller implements Serializable {
     private Integer id;
     private String name;
     private String email;
-    private Date birthday;
-    private Double Salary;
+    private Date birthDate;
+    private Double baseSalary;
 
     private Department department;
 
@@ -18,12 +18,12 @@ public class Seller implements Serializable {
     }
 
 
-    public Seller(Integer id, String name, String email, Date birthday, Double salary, Department department) {
+    public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.birthday = birthday;
-        Salary = salary;
+        this.birthDate = birthDate;
+        this.baseSalary = baseSalary;
         this.department = department;
     }
 
@@ -51,20 +51,20 @@ public class Seller implements Serializable {
         this.email = email;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public Double getSalary() {
-        return Salary;
+    public Double getBaseSalary() {
+        return baseSalary;
     }
 
-    public void setSalary(Double salary) {
-        Salary = salary;
+    public void setBaseSalary(Double baseSalary) {
+        this.baseSalary = baseSalary;
     }
 
     public Department getDepartment() {
@@ -94,9 +94,10 @@ public class Seller implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", birthday=" + birthday +
-                ", Salary=" + Salary +
+                ", birthday=" + birthDate +
+                ", Salary=" + baseSalary +
                 ", department=" + department +
                 '}';
     }
+
 }
